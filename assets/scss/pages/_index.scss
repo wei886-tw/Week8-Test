@@ -84,8 +84,19 @@
 }
 
 .fs-md-l {
-  @media (min-width: 768px) {
+  @media (min-width: 996px) {
+    font-size: 256px;
+    
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 360px;
+    
+  }
+
+  @media (min-width: 1400px) {
     font-size: 400px;
+
   }
 }
 
