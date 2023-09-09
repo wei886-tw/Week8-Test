@@ -30,18 +30,11 @@
 
 .banner-name{
   position: absolute;
-  // transform: translate(50%, -700%)
   top: 0;
-
-
 }
 
 .brand-name{
   letter-spacing: 3.5rem;
-}
-
-.test{
-  letter-spacing: inherit;
 }
 
 
@@ -52,6 +45,11 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: blur(5px);	
+	top: 0;	
+	bottom: 0;	
+	right: 0;	
+	left: 0;	
 
 }
 
@@ -61,36 +59,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .purple-bar{
   height: 40px;
   @include gradient-x(rgba(112, 0, 255, 1), rgba(17, 0, 45, 1));
+
 }
 
-
-body {
-  font-family: 'Noto Sans TC', sans-serif;
+.purple-bar-2{
+  height: 40px;
+  @include gradient-x(rgba(112, 0, 255, 1), rgba(17, 0, 45, 1))
 }
 
-a {
-  display: block;
-  text-decoration: none;
-}
-
-.font-Shrikhand {
-  font-family: 'Shrikhand', cursive;
-}
-
-.font-Saira {
-  font-family: 'Saira Extra Condensed', sans-serif;
-}
-
-.fs-24 {
-  font-size: 24px;
-}
-
+// 助教
 .fs-md-32 {
   @media (min-width: 768px) {
     font-size: 32px;
@@ -107,13 +89,6 @@ a {
   }
 }
 
-.mb-16 {
-  margin-bottom: 16px;
-}
-
-.mb-18 {
-  margin-bottom: 18px;
-}
 
 .mb-md-20 {
   @media (min-width: 768px) {
@@ -127,9 +102,9 @@ a {
   }
 }
 
+// 助教
 .card {
-  padding: 24px 12px;
-  background-color: #000;
+  background-color: #000 !important ;
   background-blend-mode: darken;
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/vito.png?raw=true);
   background-size: cover;
@@ -139,15 +114,54 @@ a {
     padding: 24px 40px 56px;
   }
   &:hover {
-    background-color: rgb(255 122 127 / 0.2);
+    background-color: rgb(255 122 127 / 0.2) !important;
   }
 }
 
 .index-carousel-con{
-  background-image: url(../../images/carousel_background.png);
+  background-image: url("../images/carousel_background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 560px;
+  max-width: 1296px;
+  height: auto;
+  object-fit: cover;
+
 }
 
+.swiper-button-prev {
+	img {	
+		width: 50px;		
+		height: auto;	
+	}
+}
+
+.swiper-button-next {
+	img {	
+		max-width: 100px;		
+		height: auto;	
+    right: 50px
+	}
+}
+
+.swiper-box {
+		max-width: 70%; //設置內容寬度		
+		margin: 0 auto;		
+		position: relative;		
+		& [class^="swiper-button-"]::after {		
+		content: "";	
+	}
+}
+
+.swiper-container {
+		margin: 0 auto;		
+		position: relative;		
+		overflow: hidden;		
+		list-style: none;		
+		padding: 0;		
+		z-index: 1;
+}
+.swiper-box .swiper-container {
+		position: unset;		
+		margin: 0 110px; //設置箭頭與內容圖片相對位置
+}
