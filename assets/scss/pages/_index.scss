@@ -156,7 +156,10 @@
 }
 
 .swiper-box {
-		max-width: 70%; //設置內容寬度		
+		max-width: 90%; //設置內容寬度	
+    @include pc{
+      max-width: 100%;
+    }	
 		margin: 0 auto;		
 		position: relative;		
 		& [class^="swiper-button-"]::after {		
